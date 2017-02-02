@@ -32,7 +32,7 @@ public class menu extends Activity implements View.OnClickListener {
     public void onClick(View v) {
     /* Réagir au clic */
         if(v==playButton){
-            Intent ecranNiveau = new Intent(menu.this, MainActivity.class);
+            Intent ecranNiveau = new Intent(menu.this, niveaux.class);
             startActivity(ecranNiveau);
         }else if (v==instButton){
             Intent instruction = new Intent (menu.this, instructions.class);
