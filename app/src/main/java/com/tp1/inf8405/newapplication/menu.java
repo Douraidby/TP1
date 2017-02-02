@@ -35,8 +35,8 @@ public class menu extends Activity implements View.OnClickListener {
             Intent ecranNiveau = new Intent(menu.this, MainActivity.class);
             startActivity(ecranNiveau);
         }else if (v==instButton){
-            //Intent instruction = new Intent (activite1.this, Instruction.class);
-            //startActivity(instruction);
+            Intent instruction = new Intent (menu.this, instructions.class);
+            startActivity(instruction);
         }else if (v==quitButton){
             finish();
         }
