@@ -9,15 +9,17 @@ import android.graphics.Paint;
 import android.graphics.Point;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.MotionEvent;
+import android.view.View;
 import android.widget.ImageView;
+import android.widget.Toast;
 
-public class MainActivity extends Activity {
+public class MainActivity extends Activity implements View.OnTouchListener{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
 
         final ImageView imagegrille = (ImageView) findViewById(R.id.grid5x8);
         Bitmap bmp = BitmapFactory.decodeResource(this.getResources(),R.drawable.grid5x8);
@@ -99,10 +101,21 @@ public class MainActivity extends Activity {
             for (int j=0;j<PositionsNiv1[0].length;j++){
                     paint.setColor(paintNiv1[i][j]);
                     canvas.drawCircle(PositionsNiv1[i][j].x, PositionsNiv1[i][j].y, RayonCercle, paint);
-
         }
 
         imagegrille.setImageBitmap(tempBitmap);
+    }
+
+    @Override
+    public boolean onTouch (View v,MotionEvent e) {
+        int action = e.getAction();
+        switch(action){
+            case 1:
+                Toast.makeText(this, "Action Down", Toast.LENGTH_SHORT).show();
+            case 2 :
+                Toast.makeText(this,"Action up",Toast.LENGTH_SHORT).show();
+        }
+        return true;
     }
 }
 

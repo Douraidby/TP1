@@ -11,31 +11,30 @@
     tools:context="com.tp1.inf8405.newapplication.menu">
 
     <Button
-        android:text="Play"
+        android:text="Instuctions"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/play"
-        android:layout_marginBottom="37dp"
-        android:layout_above="@+id/instButton"
+        android:layout_marginTop="55dp"
+        android:id="@+id/instButton"
+        android:layout_below="@+id/playButton"
         android:layout_centerHorizontal="true" />
 
     <Button
-        android:text="Instructions"
+        android:text="Jouer "
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/instButton"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="194dp" />
+        android:layout_marginTop="133dp"
+        android:id="@+id/playButton"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
 
     <Button
         android:text="Quitter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="59dp"
         android:id="@+id/quitButton"
-        android:layout_alignParentTop="true"
-        android:layout_alignLeft="@+id/play"
-        android:layout_alignStart="@+id/play"
-        android:layout_marginTop="58dp" />
-
+        android:layout_below="@+id/instButton"
+        android:layout_alignLeft="@+id/playButton"
+        android:layout_alignStart="@+id/playButton" />
 </RelativeLayout>
