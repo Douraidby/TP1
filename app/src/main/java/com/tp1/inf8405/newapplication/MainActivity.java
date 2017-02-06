@@ -97,7 +97,7 @@ public class MainActivity extends Activity implements View.OnTouchListener{
 
 
         Paint paint = new Paint();
-        //On dessine les cercles sur le canvas        
+        //On dessine les cercles sur le canvas
         fonctions.dessinerCercles(PositionsNiv1,paintNiv1,paint,canvas,RayonCercle);
         imagegrille.setImageBitmap(tempBitmap);
     }
