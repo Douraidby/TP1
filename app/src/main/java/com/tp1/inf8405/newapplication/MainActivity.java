@@ -9,13 +9,15 @@ import android.graphics.Paint;
 import android.graphics.Point;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
 
 public class MainActivity extends Activity implements View.OnTouchListener{
-
+    private Menu m = null;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -115,6 +117,15 @@ public class MainActivity extends Activity implements View.OnTouchListener{
             case 2 :
                 Toast.makeText(this,"Action up",Toast.LENGTH_SHORT).show();
         }
+        return true;
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        super.onCreateOptionsMenu(menu);
+        MenuInflater inflater = getMenuInflater();
+        //R.menu.menu est l'id de notre menu
+        inflater.inflate(R.layout.menu, menu);
         return true;
     }
 }
