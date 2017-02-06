@@ -97,14 +97,8 @@ public class MainActivity extends Activity implements View.OnTouchListener{
 
 
         Paint paint = new Paint();
-
-        //Affichage des cercles sur le tempBitmap avec le canvas
-        for (int i=0;i<PositionsNiv1.length;i++)
-            for (int j=0;j<PositionsNiv1[0].length;j++){
-                    paint.setColor(paintNiv1[i][j]);
-                    canvas.drawCircle(PositionsNiv1[i][j].x, PositionsNiv1[i][j].y, RayonCercle, paint);
-        }
-
+        //On dessine les cercles sur le canvas        
+        fonctions.dessinerCercles(PositionsNiv1,paintNiv1,paint,canvas,RayonCercle);
         imagegrille.setImageBitmap(tempBitmap);
     }
 
